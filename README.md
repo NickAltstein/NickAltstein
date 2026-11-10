@@ -59,6 +59,13 @@ As autonomous agents transition from Level 2/3 (interactive pairing with human a
 ## Featured Systems — Technical Breakdown
 
 ### 1. [`receiptd`](https://github.com/NickAltstein/receiptd) — Open Agent Authorization & Evidence Layer
+
+<p align="center">
+  <a href="https://github.com/NickAltstein/receiptd">
+    <img src="assets/receiptd-banner.png" alt="Receiptd Banner" width="700" />
+  </a>
+</p>
+
 * **Architecture:** Pre-execution gatekeeper and tamper-evident audit ledger for Model Context Protocol (MCP) and Claude Code tool-calling agents.
 * **Key Capability:** Evaluates JSON-RPC 2.0 tool arguments against strict YAML/AST policy rules, blocks unauthorized mutations fail-closed with exit code 2, and emits offline-verifiable Ed25519 receipts linked via an append-only SHA-256 hash chain.
 * **Quickstart:** `pip install git+https://github.com/NickAltstein/receiptd && receiptd init --claude-code`
