@@ -33,7 +33,7 @@ As autonomous agents transition from Level 2/3 (interactive pairing with human a
 * **No human is there to click 'Approve':** The traditional "hit enter to confirm bash command" safety net disappears.
 * **Stop hooks must fail closed:** Without a human checking the final output, agents routinely declare tasks complete while unit tests fail. Receiptd gates both ends—intercepting dangerous tool mutations (`PreToolUse`, exit 2) and blocking completion declarations (`Stop`, exit 2) until the test suite passes and signs a verification receipt.
 * **Autonomous loops need hard mechanical brakes:** Overnight runs can spend unbounded tokens in recursive retry spirals. [INFINI](https://github.com/NickAltstein/infini) enforces Level 4 runtime brakes: strict token ceilings, dollar spend caps, stagnation aborts (halting after 2 consecutive rounds that find nothing new), and incremental state writes after every single step.
-* **Accountability requires cryptographic proof:** If an autonomous fleet took 4,000 actions while you slept, post-hoc logs can be hallucinated, truncated, or tampered with. [Receiptd](https://github.com/NickAltstein/receiptd) commits every decision to an append-only Ed25519-signed Merkle tree, giving operators mathematical proof of what the fleet did, when, and under which policy.
+* **Accountability requires cryptographic proof:** If an autonomous fleet took 4,000 actions while you slept, [Receiptd](https://github.com/NickAltstein/receiptd) commits every decision to an append-only Ed25519-signed Merkle tree, giving operators a tamper-evident, signed record of every action, when, and under which policy.
 
 ---
 
