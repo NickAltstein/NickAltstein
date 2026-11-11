@@ -12,6 +12,12 @@ Open the [blocked-call demo](https://sandbox.auditgpt.ai/?scenario=prod-drop-tab
 
 ## Featured projects
 
+<p align="center">
+  <a href="https://github.com/NickAltstein/receiptd">
+    <img src="assets/receiptd-banner.png" alt="Receiptd" width="600" />
+  </a>
+</p>
+
 | Project | What I built |
 | --- | --- |
 | [Receiptd](https://github.com/NickAltstein/receiptd) | A fail-closed Claude Code `PreToolUse` hook. Tool calls routed through the hook produce Ed25519-signed, SHA-256 hash-chained receipts with a Merkle checkpoint every 100 receipts. `receiptd verify` checks the record offline. |
