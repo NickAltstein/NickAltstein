@@ -2,7 +2,7 @@
 
 **AI Infrastructure Engineer focused on agent security · New York, NY**
 
-I build open-source tools that test agent workflows in CI, enforce policy on tool calls, and produce signed records that reviewers can verify offline.
+I build harnesses for AI agents: fail-closed tool authorization, signed receipts, adversarial tests.
 
 [Try the live sandbox](https://sandbox.auditgpt.ai/?scenario=prod-drop-table&step=1) · [AuditGPT](https://auditgpt.ai) · [LinkedIn](https://www.linkedin.com/in/nickaltstein/) · [Email](mailto:nickaltstein@gmail.com)
 
