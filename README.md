@@ -21,7 +21,7 @@ Open the [blocked-call demo](https://sandbox.auditgpt.ai/?scenario=prod-drop-tab
 | Project | What I built |
 | --- | --- |
 | [Receiptd](https://github.com/NickAltstein/receiptd) | A fail-closed Claude Code `PreToolUse` hook (`pip install receiptd`). Tool calls routed through the hook produce Ed25519-signed, SHA-256 hash-chained receipts with a Merkle checkpoint every 100 receipts. `receiptd verify` checks the record offline. [v1.5 scored results](https://github.com/NickAltstein/receiptd/blob/main/docs/eval/v1.5-scored-results.md): 50 cases × 2 models, Llama 14/16, qwen 5/10, no pooled rate; every miss is published. |
-| [AuditGPT](https://github.com/NickAltstein/auditgpt) | Adversarial test battery across 5 failure classes, npm, MIT. Public source on GitHub; site at [auditgpt.ai](https://auditgpt.ai). |
+| [AuditGPT](https://github.com/NickAltstein/auditgpt) | 15 multi-turn adversarial harnesses across 5 failure classes plus 20 single-turn probes. CLI, npm, MIT. |
 | [INFINI](https://github.com/NickAltstein/infini) | An agent loop CLI that writes traces to `run.json` and stops after two consecutive rounds with no new progress. |
 
 ## How I evaluate
