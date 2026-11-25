@@ -20,10 +20,16 @@ Open the [blocked-call demo](https://sandbox.auditgpt.ai/?scenario=prod-drop-tab
 
 | Project | What I built |
 | --- | --- |
-| [Receiptd](https://github.com/NickAltstein/receiptd) | A fail-closed Claude Code `PreToolUse` hook. Tool calls routed through the hook produce Ed25519-signed, SHA-256 hash-chained receipts with a Merkle checkpoint every 100 receipts. `receiptd verify` checks the record offline. |
-| [AuditGPT](https://auditgpt.ai) | A CLI for testing agent workflows across five failure classes, with terminal, Markdown, or SARIF output. The source repository is not public, so a license file is not available to inspect. |
+| [Receiptd](https://github.com/NickAltstein/receiptd) | A fail-closed Claude Code `PreToolUse` hook (`pip install receiptd`). Tool calls routed through the hook produce Ed25519-signed, SHA-256 hash-chained receipts with a Merkle checkpoint every 100 receipts. `receiptd verify` checks the record offline. In a [pre-committed evaluation](https://github.com/NickAltstein/receiptd/blob/main/docs/eval/v1.5-scored-results.md) with two local models, the gate prevented 14 of 16 attempted attacks for Llama 3.1 8B and 5 of 10 for Qwen 2.5 7B; every miss is published. |
+| [AuditGPT](https://auditgpt.ai) | A CLI for testing agent workflows across five failure classes, with terminal, Markdown, or SARIF output. Closed source. |
 | [INFINI](https://github.com/NickAltstein/infini) | An agent loop CLI that writes traces to `run.json` and stops after two consecutive rounds with no new progress. |
 | [Attestum](https://github.com/NickAltstein/Attestum) | A pre-launch project for evaluating changes to industrial robot cells using existing controller logs, video, and intervention records. No customers or assessments delivered yet. |
+
+## How I evaluate
+
+- Thresholds and scoring rules are committed before a run, and results are not regraded afterwards.
+- New test cases are held out and hash-pinned before the fix author can see them.
+- Misses, errors, and unmet targets are published alongside the passes.
 
 ## Background
 
